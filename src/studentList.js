@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { createPortal } from 'react-dom';
 import { data } from './App'
 
+
 function AllStudents() {
     return (
         <div>
