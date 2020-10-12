@@ -2,34 +2,23 @@ import React, { Component } from 'react'
 import { createPortal } from 'react-dom';
 import { data } from './App'
 
-// function AllStudents() {
-//     return (
-//         <div>
-//             <ol>
-//                 {data.map(teacher => (<li>{teacher.teacherName}</li>))}
-//             </ol>
-//         </div>
-//     );
-// }
 function AllStudents() {
     return (
         <div>
             {
                 data.map((teacher, key) => (
-                     <div key={key}>
-                        {teacher.students.map((student, key) =>(
+                    <div key={key}>
+                        {teacher.students.map((student, key) => (
                             <li key={key}>
-                                {student.name}
+                                <span>{student.name} </span>
                             </li>
                         ))}
-                     </div>
+                    </div>
                 ))
             }
         </div>
     );
 }
-
-
 
 export default function StudentList() {
     return (
